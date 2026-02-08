@@ -458,10 +458,7 @@ include 'db.php'; ?>
 <footer class="site-footer">
   <div class="footer-content">
     <img src="icon/gc.png" style="width: 50px;height: 50px;">
-    <p>台中市北區三民路三段129號 (國立臺中科技大學)</p>
-    <p>服務專線：04-22195678( 週一至週五早上9:00-17:00，非服務時間請勿直接撥打 )</p>
     <p>Copyright © 2024 GLAMCYCLE. All rights reserved.</p>
-    <p>Design by <span style="font-weight: bold;">許莉筠.許宇晴.楊媗葦.</span></p>
   </div>
 </footer>
 

@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="zh-hant">
+  <meta charset="UTF-8">
+  <title>捐款 | GLAMCYCLE</title>
+  <link rel="icon" type="icon" href="icon/gc.png" />
+  <form name="info" method="post" action="submit_donation.php"></form>
+<head>
+
+</head>
+<style>
+body {
+    background-image: url('圖片/送出 .gif'); /* 替换 'image.jpg' 为您实际图片的路径 */
+    background-size: cover; /* 背景图片大小自适应 */
+}
+/* 父容器的样式 */
+.parent {
+  display: flex;
+  justify-content: flex-end; /* 使子元素靠右对齐 */
+  align-items: center; /* 使子元素垂直居中 */
+  height: 100%; /* 父容器高度，确保有足够的空间垂直居中 */
+}
+
+/* 目标<div>的样式 */
+.d1 {
+  width: 50%; /* 或者根据需要设置具体宽度 */
+  font-size: 20px;
+  margin-top: 30px;
+  font-weight: bold;
+  margin-right: 30px;
+  animation: floatUp 1s ease-out forwards;
+  
+}
+p {
+  text-align: center; /* 使文本居中对齐 */
+  margin-top: 10px;
+}
+.d0{
+    width: 50%;
+    margin-right: 40px;
+    margin-top: 300px;
+    height: 300px;
+    background-color: rgba(134, 182, 246, 0.64);
+    border: 2px #86B6F6 solid;
+    border-radius: 150px;
+    display: flex; /* 將.d0設定為Flex容器 */
+    flex-direction: column; /* 子元素垂直排列 */
+    justify-content: center; /* 垂直居中子元素 */
+    font-size: 30px;
+    font-weight: bold;
+    color: #4B527E;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
+    
+
+}
+@keyframes floatUp {
+  from {
+    transform: translateY(20px); /* 开始时，.d0稍微低于最终位置 */
+    opacity: 0; /* 开始时完全透明 */
+  }
+  to {
+    transform: translateY(0); /* 结束时，.d0在最终位置 */
+    opacity: 1; /* 结束时完全不透明 */
+  }
+}
+
+</style>
+<body>
+    <div class="parent"> 
+      <div class="d0">
+        <P>姓名 : 許莉筠</p>
+        <p>Email : liyunx087@gmail.com</p>
+        <p>您的心意 : 100 TWD</p>
+      </div>
+    </div>
+    <div class="parent"> <!-- 确保这个类应用到了包裹.d1的父容器上 -->
+        <div class="d1">
+            <p>謝謝您的捐款！在5個工作日後，將會確認您的扣款。請注意Email信件。</p>
+            <p>為了確保您的捐款流程順暢，請確認您的聯絡資訊更新無誤。</p>
+            <p>如果有任何疑問，歡迎隨時與我們聯絡。再次感謝您對我們網站的支持和信任。</p>
+            <p>⠀⠀</p>
+            <p style="text-decoration: underline;color: #86B6F6;font-size: 18px;">捐款資料有誤 ? 請聯絡我們 !</p>
+            <p style="color: #86B6F6;font-size: 18px;">電話 :  04 2219 5678 週一至週五 07:00-22:00 非服務時間請勿直接撥打</p>
+        </div>
+    </div>
+        
+    
+
+</body>
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+      // 從URL獲取參數
+      const params = new URLSearchParams(window.location.search);
+      const name = params.get('name'); // 獲取名稱
+      const mon = params.get('mon'); // 獲取捐款金額
+      const email = params.get('email'); // 獲取email金額
+  
+      // 更新HTML元素以顯示獲取的數據
+      if (name && mon && email) {
+          document.querySelector('.d0 p:nth-child(1)').textContent = '姓名 : ' + name;
+          document.querySelector('.d0 p:nth-child(3)').textContent = '您的心意 : ' + mon + ' TWD';
+          document.querySelector('.d0 p:nth-child(2)').textContent = 'Email : ' + email;
+      }
+  });
+  </script>
+  
+</html>

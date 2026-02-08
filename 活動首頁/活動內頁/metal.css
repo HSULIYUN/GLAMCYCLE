@@ -1,0 +1,486 @@
+body {
+    font-family: 'Noto Serif TC', serif;
+    font-family: Arial, sans-serif;
+    background-image: url('圖片/背背背.png'); /* 換成您想要的圖片路徑 */
+    background-size: cover; /* 或使用其他值，如 contain、100% 等 */
+    background-position: center; /* 背景圖片居中 */
+}
+
+.title-container1 {
+    padding: 20px;
+    background-color: #f0f0f0;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    text-align: left; /* 改為左對齊 */
+    height: 300px;
+    display: flex; /* 使用 Flexbox */
+    flex-direction: column; /* 內容垂直堆疊 */
+    align-items: flex-start; /* 所有內容靠左對齊 */
+    justify-content: center; /* 垂直置中 */
+   
+}
+.div1{
+    margin-left: 1000px;
+}
+
+
+.title-container svg {
+    width: 25px !important;
+    height: 25px !important;
+    margin-bottom: 20px !important;
+    display: block !important;
+    margin-left: 10px !important;
+    margin-right: 0 !important;
+}
+
+.container {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    margin-left: 10px !important;
+}
+.container a {
+    text-decoration: none; /* 移除下劃線 */
+    color: black;
+    font-weight: none; /* 設置文字顏色為黑色 */
+}
+
+.container a:hover {
+    color: aqua; /* 滑過時改變顏色 */
+}
+.co1 {
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: flex-start; /* Align to the top */
+    height: 100vh; /* Full height of the viewport */
+    margin-top: -80px; /* Adjust the position upwards */
+}
+.hovicon.effect-1 {
+    margin-left: 1150px;
+    width: 160px; /* 圆形的直径 */
+    height: 160px; /* 圆形的直径 */
+    background-color: rgba(61, 59,64,  0.1); /* 默认的圆形背景颜色 */
+    border-radius: 50%; /* 使其成为圆形 */
+    position: relative;
+    top: -235px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-align: center;
+    font-size: 25px;
+    transition: background-color 0.2s, color 0.2s; /* 背景和文字颜色的变化 */
+}
+@media (max-width: 768px) {
+    .hovicon.effect-1 {
+        margin-left: 450px;
+    }
+}
+
+
+.hovicon.effect-1:before {
+    content: '';
+    position: absolute;
+    top: 10px; /* 与圆形背景留出一定间隙 */
+    left: 10px;
+    right: 10px;
+    bottom: 10px;
+    border: 2px solid transparent; /* 默认透明边框 */
+    border-radius: 50%;
+    transition: border-color 0.2s, transform 0.2s;
+    z-index: 1; /* 确保在背景之上 */
+}
+
+.hovicon.effect-1:hover {
+    background-color: #CCC8AA; /* 悬停时的圆形背景颜色 */
+    color: #fff; /* 悬停时的文字颜色 */
+}
+
+.hovicon.effect-1:hover:before {
+    border-color: #CCC8AA; /* 悬停时显示圆形边框 */
+    transform: scale(1.25); /* 边框稍微放大，与背景分开 */
+}
+
+/* 确保文字在最上层 */
+.hovicon.effect-1 > * {
+    position: relative;
+    z-index: 2; /* 文字层级最高，确保可见 */
+}
+
+
+.co1 img {
+    max-width: 100%; /* Make image responsive */
+    height: auto;
+    margin-top: 200px; /* Maintain aspect ratio */
+}
+.additional-line0::before { /*第一排最左直線*/
+    content: ''; /* 必須設定，即使沒有實際內容 */
+    position: absolute; /* 絕對定位橫線 */
+    top: 550px; /* 定位到容器的最上方 */
+    left: 0; /* 靠左對齊 */
+    width: 30%; /* 橫線寬度為容器的100% */
+    height: 5px; /* 橫線的高度 */
+    background-color: #B4B4B8; /* 橫線的顏色 */
+}
+.additional-line0::after { /*第二排最左直線*/
+    content: ''; /* 必須設定，即使沒有實際內容 */
+    position: absolute; /* 絕對定位橫線 */
+    top: 1275px; /* 定位到容器的最上方 */
+    left: 0%; /* 靠左對齊 */
+    width: 40%; /* 橫線寬度為容器的100% */
+    height: 4px; /* 橫線的高度 */
+    background-color: #7D7C7C; /* 橫線的顏色 */
+}
+.additional-line::before{ /*第二排中間直線*/
+
+    content: ''; /* 必須設定，即使沒有實際內容 */
+    position: absolute; /* 絕對定位橫線 */
+    top: 1250px; /* 定位到容器的最上方 */
+    right: 25%; /* 靠左對齊 */
+    width: 40%; /* 橫線寬度為容器的100% */
+    height: 4px; /* 橫線的高度 */
+    background-color: #B4B4B8;
+}
+
+.additional-line::after{ /*第一排中間直線*/
+    content: ''; /* 必須設定，即使沒有實際內容 */
+    position: absolute; /* 絕對定位橫線 */
+    top: 585px; /* 定位到容器的最上方 */
+    left: 20%; /* 靠左對齊 */
+    width: 60%; /* 橫線寬度為容器的100% */
+    height: 3px; /* 橫線的高度 */
+    background-color: #7D7C7C; /* 橫線的顏色 */
+}
+.additional-line1::before{ /*第一排最右直線*/
+    content: ''; /* 必須設定，即使沒有實際內容 */
+    position: absolute; /* 絕對定位橫線 */
+    top: 585px; /* 定位到容器的最上方 */
+    right: 0%; /* 靠左對齊 */
+    width: 19%; /* 橫線寬度為容器的100% */
+    height: 3px; /* 橫線的高度 */
+    background-color: #B4B4B8; /* 橫線的顏色 */
+}
+.additional-line1::after{ /*第二排最右直線*/
+    content: '';
+    position: absolute;
+    top: 1275px; /* 從頂部開始 */
+    right: 0%; /* 根據需要調整，這裡設定為容器寬度的25% */
+    width: 30%; /* 直線的寬度 */
+    height: 5px; /* 直線的高度，撐滿容器 */
+    background-color: #7D7C7C;
+
+
+}
+.additional-line0,.additional-line, .additional-line1 {
+    opacity: 0;
+    visibility: hidden; /* 初始状态不可见，但仍保留在布局中 */
+}
+.div02 {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    margin-top: -100px; /* 向下移动位置 */
+    font-weight: none;
+}
+
+.div04 {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    margin-top: 20px; /* 向下移動位置 */
+    color: black;
+    text-align: center; /* 確保文本在容器內居中 */
+    font-size:20px;
+
+}
+.div03 {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    margin-top: 200px; /* 向下移動位置 */
+    color: #4B527E;
+    text-align: center; /* 確保文本對齊 */
+}
+.div05 img {
+    width: 80%; /* 縮小圖片至容器寬度的80% */
+    height: auto; /* 保持圖片的原始寬高比 */
+    max-width: 100%; /* 確保圖片不會超過容器寬度 */
+}
+.div05 {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 *//* 向下移動位置 */
+    color: #4B527E;
+    text-align: center; /* 確保文本對齊 */
+    width: 75%;
+    margin-left: 13%;
+}
+.div06 {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    margin-top: 50px; /* 向下移動位置 */
+    color: #4B527E;
+    font-size:20px;
+}
+.centered-content {
+    display: flex;
+    flex-direction: column; /* 設置主軸方向為垂直 */
+    align-items: center; /* 垂直居中（實際上是對齊子元素到父元素的中心） */
+    width: 100%; /* 可根據需要調整 */
+}
+.div07 {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    margin-top: 50px; /* 向下移動位置 */
+    color: #4B527E;
+    font-size:20px;
+}
+.div08 {
+    display: flex;
+    flex-direction: column; /* 始終使用垂直排列 */
+    align-items: center; /* 水平居中對齊 */
+    text-align: center; /* 文字居中對齊 */
+    padding: 20px;
+    margin-top: 20px;
+    color: black;
+    font-size: 20px;
+}
+
+.div08 img {
+    width: 30%; /* 控制圖片寬度，適應不同屏幕 */
+    height: auto; /* 保持圖片比例 */
+    margin-bottom: 20px; /* 圖片和文字之間的間距 */
+}
+
+.div08 p {
+    font-family: 'Noto Serif TC', serif;
+    color: black;
+    font-size: 20px;
+    white-space: normal; /* 允許文字換行 */
+    width: 100%; /* 文字區塊寬度設為 100%，以便換行 */
+}
+
+@media (max-width: 768px) {
+    .div08 img {
+        width: 80%;
+    }
+
+    .div08 p {
+        font-size: 16px;
+    }
+    
+
+}
+
+
+.div10 {
+    display: flex;
+    justify-content: center; /* 水平居中 */
+    align-items: center; /* 垂直居中 */
+    margin: 50px auto; /* 自动水平居中并向下移动位置 */
+    color: #4B527E;
+    font-size: 20px;
+    text-align: center; /* 文字置中对齐 */
+    height: 200px;
+    width: 60%;
+    background-color: #f0f0f0;
+}
+
+
+h1 {
+    font-size: 2em;
+}
+
+.main-container {
+    max-width: 1200px; /* 或者其他適合你設計的最大寬度 */
+    margin: 0 auto; /* 左右邊距自動 */
+}
+
+main {
+    display: flex;
+    justify-content: space-between;
+}
+
+article {
+    width: 30%;
+    margin: 0 50px; /* 每篇文章之間的邊距 */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 可選，添加一點陰影效果 */
+    margin-top: 50px;
+    border-radius: 10px;
+    background-color: #fff;
+}
+
+article img {
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 10px; /* 左上角圆角 */
+  border-top-right-radius: 10px; /* 右上角圆角 */
+  border-bottom-left-radius: 0; /* 左下角无圆角 */
+  border-bottom-right-radius: 0; /* 右下角无圆角 */
+}
+
+article h2 {
+    font-size: 1.5em;
+    color: #333;
+    margin-left: 10px;
+    font-weight: bold;
+    margin-top:10px;
+}
+
+article p {
+    color: #666;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
+
+footer {
+    margin-top: 50px;
+    padding: 0 15px; /* 同樣添加內距 */
+}
+
+/* 請根據具體需要進行相應的媒體查詢調整以實現響應式設計 */
+@media (max-width: 768px) {
+    main {
+        flex-direction: column;
+    }
+
+    article {
+        width: auto; /* 允許文章擴展填滿屏幕 */
+        margin: 0 15px 20px; /* 添加邊距並確保有間距在文章底部 */
+    }
+
+    header, .main-container, footer {
+        padding: 0 15px; /* 保持邊距一致 */
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.container span {
+    margin-top: -17px;
+    font-weight: bold;
+}
+
+
+.event-title {
+    font-size: 24px;
+    color: #333;
+    margin: 0; /* 移除邊距 */
+    font-size: 40px;
+    margin-left: 30px; /* 移除左邊距以使其靠左 */
+}
+
+
+.navbar {
+    position: -webkit-sticky; 
+position: sticky;
+top: 0;
+z-index: 1000;
+width: 100%;
+background-color: rgba(255, 255, 255, 0.6); 
+box-shadow: 0 2px 5px rgba(0,0,0,0.2); 
+font-weight: bold;
+
+}
+
+
+.navbar-nav .nav-link {
+    color: #7D7C7C;
+    font-size:20px; 
+    margin-right: 25px;
+    
+}
+.user-name {
+  color: #7D7C7C;
+    font-size:20px;
+    margin-right: 25px;
+}
+.user-avatar {
+    width: 60px; 
+    height: 60px; 
+}
+.navbar-brand img {
+    width: 80px; 
+    height: 52px; 
+}
+
+
+/* 螢幕寬度小於 768px */
+@media (max-width: 768px) {
+
+
+    .title-container {
+        width: 100%;
+        font-size: 20px; /* 更小的字體大小 */
+    }
+
+    .main-content {
+        padding: 15px;
+        font-size: 12px;
+    }
+}
+
+/* 螢幕寬度小於 480px */
+@media (max-width: 480px) {
+    .title-container {
+        padding: 0 5px; /* 添加側邊內距 */
+    }
+
+    .main-content {
+        padding: 10px;
+        font-size: 10px; /* 最小的字體大小，以適應非常小的螢幕 */
+    }
+}
+/* 以下為動畫區域 */
+.slide-in {
+    transform: translateX(-100%);
+    transition: transform 1s ease-out; /* 可調整時間以控制動畫速度 */
+}
+
+.slide-active {
+    transform: translateX(0);
+}
+.float-up {
+    transform: translateY(100%); /* 從下方開始 */
+    opacity: 0;
+    transition: transform 1.5s ease-out, opacity 1.5s ease-out; /* 動畫時間及變化方式 */
+}
+
+.float-active {
+    transform: translateY(0); /* 回到原來位置 */
+    opacity: 1;
+}
+
+.fade-in {
+    opacity: 0;
+    transition: opacity 2s ease-in-out; /* 淡入效果持續2秒 */
+}
+
+.fade-active {
+    opacity: 1;
+}

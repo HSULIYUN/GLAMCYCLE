@@ -1,0 +1,104 @@
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url('會員註冊_登入/背景-1.png');
+}
+
+.container {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.login-section, .signup-section {
+    background: #fff;
+    padding: 20px;
+    width: 70%;
+}
+
+h2 {
+    text-align: center;
+    color: #637A9F;
+}
+
+input[type="text"], input[type="password"], input[type="email"], select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #DDDDDD;
+    border-radius: 4px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, transform 0.3s ease; /* 添加平滑过渡效果 */
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, select:focus {
+    border-color: #3B5998; /* 焦点状态下的边框颜色 */
+    transform: scale(1.02); /* 轻微放大 */
+    outline: none; /* 移除默认的焦点轮廓 */
+}
+
+
+button {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #B3C8CF;
+    color: #637A9F;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+button[type="button"] {
+    background-color: #3B5998;
+}
+
+a {
+    display: block;
+    text-align: center;
+    margin-top: 10px;
+    color: #888;
+    text-decoration: none;
+}
+
+.success {
+    color: green;
+}
+.error {
+    color: red;
+}
+.captcha-container  {
+    float: left;
+}
+
+.captcha-container button {
+    margin-left: 10px; /* 在图片和按钮之间添加一些间距 */
+}
+@keyframes slideDown {
+    from {
+        transform: translateY(-100%); /* 动画开始时，元素位于视窗上方，完全不可见 */
+    }
+    to {
+        transform: translateY(0); /* 动画结束时，元素回到原始位置 */
+    }
+}
+.abc {
+    animation: slideDown 1.0s ease-out forwards;/* 动画名称，持续时间，缓动函数，填充模式 */
+}
+
+
+.abc {
+    position: relative;
+    z-index: 99; /* 确保在img之下 */
+    transition: transform 0.5s ease;
+    margin-top:0px;
+}
+.uuu{
+    margin-top:10px;
+}
+

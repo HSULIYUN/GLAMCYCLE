@@ -27,7 +27,7 @@ body {
 }
 .date-input {
     padding: 10px;
-    padding-right: 30px; /* 留出图标的空间 */
+    padding-right: 30px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -42,51 +42,51 @@ body {
 }
 
 .calendar-icon i {
-    font-size: 20px; /* 调整图标大小 */
-    color: #555; /* 调整图标颜色 */
+    font-size: 20px;
+    color: #555; 
 }
 
 
-/* Flatpickr 自定义样式 */
+
 .flatpickr-calendar {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* 修改字体样式 */
-    border-radius: 10px; /* 日历边框圆角 */
-    box-shadow: 0 5px 15px rgba(0,0,0,0.2); /* 添加阴影效果 */
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
 }
 
 .flatpickr-day {
-    border-radius: 50%; /* 日期圆形显示 */
+    border-radius: 50%; 
 }
 
 .flatpickr-day.today {
-    color: #ffffff; /* 今日日期字体颜色 */
-    background: #f56c6c; /* 今日日期背景色 */
+    color: #ffffff;
+    background: #f56c6c; 
 }
 
 .flatpickr-day.selected, .flatpickr-day.startRange, .flatpickr-day.endRange, .flatpickr-day.selected.prevMonthDay, .flatpickr-day.selected.nextMonthDay {
-    background: #B4B4B8; /* 选中日期的背景色 */
-    color: #ffffff; /* 选中日期的字体颜色 */
+    background: #B4B4B8;
+    color: #ffffff;
 }
 
 #calendar-container input[type="text"] {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif, "FontAwesome";
     padding: 10px;
-    padding-right: 30px; /* 留出图标的空间 */
+    padding-right: 30px; 
     border: 1px solid #ccc;
     border-radius: 5px;
-    width: calc(60% - 22px); /* 调整宽度以适应容器 */
+    width: calc(60% - 22px); 
     
     background-repeat: no-repeat;
     background-position: right 10px center;
     background-size: 16px 16px;
 }
 
-/* 调整日历内部间距 */
+
 .flatpickr-innerContainer, .flatpickr-rContainer {
     padding: 10px;
 }
 
-/* 调整月份和年份下拉框的样式 */
+
 .flatpickr-monthDropdown-months, .flatpickr-yearDropdown {
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -94,33 +94,33 @@ body {
     background: white;
 }
 #calendar-container input[type="text"]::placeholder {
-    color: #bbb; /* 更改placeholder的颜色 */
+    color: #bbb;
 }
 
-/* 适当调整输入框与图标的间距 */
+
 #calendar-container input[type="text"] {
-    margin-right: -30px; /* 根据实际情况调整以确保图标位置合适 */
-    position: relative; /* 确保输入框在图标上方 */
-    z-index: 1; /* 输入框覆盖图标 */
+    margin-right: -30px; 
+    position: relative; 
+    z-index: 1; 
 }
 
 
 #events-container {
     display: grid;
-    grid-template-columns: repeat(3, minmax(0, 280px)); /* 创建最多三列，每列最大宽度280px */
-    justify-content: center; /* 整个网格居中 */
+    grid-template-columns: repeat(3, minmax(0, 280px)); 
+    justify-content: center; 
     gap: 20px 200px; 
     margin-left: -150px;
 }
 .event {
     box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     transition: 0.3s;
-    width: 420px; /* 调整宽度 */
-    background-color: #fff; /* 背景颜色 */
-    margin: 15px; /* 边距 */
-    border-radius: 10px; /* 圆角 */
+    width: 420px;
+    background-color: #fff; 
+    margin: 15px; 
+    border-radius: 10px; 
     overflow: hidden;
-    margin-top: 40px; /* 第二行及之后的元素向上移动 */
+    margin-top: 40px; 
 }
 .event:hover{
     background-color: #9EB8D9; 
@@ -128,21 +128,21 @@ body {
 
 @media (max-width: 768px) {
     #events-container {
-        grid-template-columns: 1fr; /* 使所有卡片在一列中顯示 */
-        gap: 10px; /* 適當調整間距 */
-        margin-left: 0; /* 移除負邊距，如果有設置的話 */
+        grid-template-columns: 1fr; 
+        gap: 10px; 
+        margin-left: 0; 
     }
 
     .event {
-        flex-direction: column;  /* 變更為垂直排列 */
-        align-items: stretch;  /* 讓子元素填滿容器寬度 */
-        width: auto; /* 讓寬度自動調整以適應容器 */
+        flex-direction: column; 
+        align-items: stretch; 
+        width: auto; 
     }
 }
 
 
 .event:first-child, .event:nth-child(2), .event:nth-child(3) {
-    margin-top: 0; /* 保持第一行元素的位置不变 */
+    margin-top: 0;
 }
 
 .event img {
@@ -169,14 +169,14 @@ body {
 }
 
 .event-date {
-    font-size: 16px; /* 日期字体大小 */
+    font-size: 16px; 
     color: #666;
 }
 .event-description {
-    margin-top: 20px; /* 调整这个值来增加或减少与上方内容的距离 */
+    margin-top: 20px;
 }
 
-.event-special { /* 特展用绿色 */
+.event-special { 
     color: green;
     border: 1px solid green;
     width: 50px;
@@ -184,7 +184,7 @@ body {
     border-radius: 10px;
 }
 
-.event-course { /* 课程用橘色 */
+.event-course {
     color: orange;
     border: 1px solid orange;
     width: 50px;
@@ -192,7 +192,7 @@ body {
     border-radius: 10px;
 }
 
-.event-other { /* 其他用蓝色 */
+.event-other {
     color: #7C93C3;
     border: 1px solid #7C93C3;
     width: 50px;
@@ -201,18 +201,17 @@ body {
 }
 
 .d1 {
-    position: relative; /* 根据图片实际大小调整 */
+    position: relative;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    margin: 0; /* 确保没有边距 */
-    padding: 0; /* 确保没有填充 */
+    margin: 0; 
+    padding: 0; 
 }
 
 
 .back-img {
-    /* 这里可以设置背景图片的样式，如宽高等 */
     width: 100%;
 }
 
@@ -220,7 +219,6 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    /* 可以调整 front-img 的宽度、高度或其他属性，以便正确覆盖 */
     width: 100%;
     height: auto;
 }
@@ -231,7 +229,7 @@ body {
     right: 20%;
     width: 250px;
     border: #fff 1px solid;
-    justify-content: center; /* 水平居中 */
+    justify-content: center;
     text-decoration: none;
     height: 70px;
     font-size: 25px;
@@ -239,9 +237,9 @@ body {
     color: #fff;
     font-weight: bold;
     align-items: center;
-    overflow: visible; /* 确保伪元素可以在按钮外部显示 */
-    animation: fadeIn 2s 2s forwards, glowing 3s 2s infinite; /* 淡入效果，延迟3秒 */
-    opacity: 0; /* 开始时不可见 */
+    overflow: visible;
+    animation: fadeIn 2s 2s forwards, glowing 3s 2s infinite;
+    opacity: 0; 
 }
 .button-link:hover{
     background-color: #fff;
@@ -260,7 +258,7 @@ body {
     transform: translateY(-50%);
     overflow: hidden;
     opacity: 0;
-    animation: fadeIn 2s 2s forwards, glowing 3s 2s infinite; /* 添加 glowing 动画 */
+    animation: fadeIn 2s 2s forwards, glowing 3s 2s infinite; 
 }
 
 @keyframes fadeIn {
@@ -282,18 +280,18 @@ body {
 
 @keyframes slideInFromRight {
     from {
-        transform: translateX(100%); /* 从右侧外部开始 */
+        transform: translateX(100%); 
     }
     to {
-        transform: translateX(0); /* 滑动到原位 */
+        transform: translateX(0); 
     }
 }
 
-/* 应用于从右侧进入的图片 */
+
 .front-img {
     position: absolute;
-    right: 0; /* 确保从右侧开始 */
-    animation: slideInFromRight 2s ease-out forwards; /* 使用动画，持续时间1秒 */
+    right: 0;
+    animation: slideInFromRight 2s ease-out forwards; 
 }
 
 @keyframes fadeIn {

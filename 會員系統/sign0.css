@@ -31,13 +31,13 @@ input[type="text"], input[type="password"], input[type="email"], select {
     border: 1px solid #DDDDDD;
     border-radius: 4px;
     box-sizing: border-box;
-    transition: border-color 0.3s ease, transform 0.3s ease; /* 添加平滑过渡效果 */
+    transition: border-color 0.3s ease, transform 0.3s ease; 
 }
 
 input[type="text"]:focus, input[type="password"]:focus, input[type="email"]:focus, select:focus {
-    border-color: #3B5998; /* 焦点状态下的边框颜色 */
-    transform: scale(1.02); /* 轻微放大 */
-    outline: none; /* 移除默认的焦点轮廓 */
+    border-color: #3B5998; 
+    transform: scale(1.02); 
+    outline: none; 
 }
 
 
@@ -77,24 +77,24 @@ a {
 }
 
 .captcha-container button {
-    margin-left: 10px; /* 在图片和按钮之间添加一些间距 */
+    margin-left: 10px; 
 }
 @keyframes slideDown {
     from {
-        transform: translateY(-100%); /* 动画开始时，元素位于视窗上方，完全不可见 */
+        transform: translateY(-100%); 
     }
     to {
-        transform: translateY(0); /* 动画结束时，元素回到原始位置 */
+        transform: translateY(0); 
     }
 }
 .abc {
-    animation: slideDown 1.0s ease-out forwards;/* 动画名称，持续时间，缓动函数，填充模式 */
+    animation: slideDown 1.0s ease-out forwards;
 }
 
 
 .abc {
     position: relative;
-    z-index: 99; /* 确保在img之下 */
+    z-index: 99; 
     transition: transform 0.5s ease;
     margin-top:0px;
 }

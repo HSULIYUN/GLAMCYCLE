@@ -9,7 +9,7 @@
 <body>
 <style>
         .grecaptcha-badge {
-            z-index: 1000; /* 确保reCAPTCHA图标在最前面 */
+            z-index: 1000; 
         }
     </style>
 
@@ -22,15 +22,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $confirm_password = $_POST['confirm_password'];
     $recaptchaResponse = $_POST['recaptcha_response'];
 
-    // 檢查 reCAPTCHA
+
     $secretKey = '6Lew6pMpAAAAAFFQ4yCqti3W7tMoYH_6J_U8d_m8';
     $response = file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=" . $secretKey . "&response=" . $recaptchaResponse);
     $responseKeys = json_decode($response, true);
 
     if (isset($responseKeys["success"]) && $responseKeys["success"] && isset($responseKeys["score"]) && $responseKeys["score"] >= 0.5) {
-        // 密碼匹配檢查
+
         if ($password === $confirm_password) {
-            // 繼續進行數據庫操作
+ 
             $conn = new mysqli('localhost', 'root', '', 'cycle');
             if ($conn->connect_error) {
                 die("連接失敗: " . $conn->connect_error);
@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             }
             $conn->close();
         } else {
-            echo "密碼不匹配，請重新輸入。";
+            echo "密碼不正確，請重新輸入。";
         }
     } else {
         echo "驗證失敗或懷疑是機器人行為";
@@ -101,7 +101,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </div>
 
     
-<!-- google安全機器人 -->
+
 <script src="https://www.google.com/recaptcha/api.js?render=6Lew6pMpAAAAACtHg6401eggdpStQxrvAP8T1SPu"></script>
 <script>
     grecaptcha.ready(function() {
@@ -130,21 +130,21 @@ function validateCaptcha() {
                 statusContainer.innerHTML = "<span style='color: green;'>✔</span>";
             } else {
                 statusContainer.innerHTML = "<span style='color: red;'>✘ 驗證失敗，請再次輸入驗證碼，或更換驗證碼</span>";
-                refresh_code(); // Optionally refresh captcha after fail
+                refresh_code(); 
             }
         }
     };
     xhr.send("captcha=" + encodeURIComponent(captcha));
 }
 
-// Prevent form submission if captcha is wrong
+
 document.getElementById("signupForm").onsubmit = function(event) {
     var captchaInput = document.getElementById("captchaInput").value;
     var statusContainer = document.getElementById("captchaStatus");
-    // 檢查是否輸入了驗證碼以及驗證碼是否通過
+
     if (captchaInput.trim() === "" || !statusContainer.innerHTML.includes("✔")) {
         alert("請先輸入並通過驗證碼驗證！");
-        event.preventDefault(); // 防止表單提交
+        event.preventDefault(); 
         return false;
     }
 };

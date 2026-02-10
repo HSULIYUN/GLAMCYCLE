@@ -3,8 +3,8 @@ body {
 }
 .image-container {
     position: relative;
-    width: 1500px; /* 容器的寬度 */
-    height: 1000px; /* 容器的高度 */
+    width: 1500px; 
+    height: 1000px; 
     transition: transform 0.5s ease-out, opacity 0.5s ease-out;
   }
   
@@ -17,95 +17,95 @@ body {
   }
   
   .image1 {
-    width: 200px; /* 圖片1的寬度 */
-    top: 70px; /* 圖片1距離容器頂部的距離 */
-    left: 70px; /* 圖片1距離容器左邊的距離 */
+    width: 200px; 
+    top: 70px; 
+    left: 70px; 
     opacity: 0.5;
   }
   
   .image2 {
-    width: 150px; /* 圖片2的寬度 */
-    top: -60px; /* 圖片2距離容器頂部的距離 */
-    left: 650px; /* 圖片2距離容器左邊的距離 */
+    width: 150px; 
+    top: -60px; 
+    left: 650px; 
   }
   .image3 {
-    width: 200px; /* 圖片2的寬度 */
-    top: 520px; /* 圖片2距離容器頂部的距離 */
-    left: 650px; /* 圖片2距離容器左邊的距離 */
+    width: 200px; 
+    top: 520px; 
+    left: 650px; 
     transform: rotate(45deg);
   }
   .image4 {
-    width: 200px; /* 圖片2的寬度 */
-    top: 450px; /* 圖片2距離容器頂部的距離 */
-    left: 200px; /* 圖片2距離容器左邊的距離 */
+    width: 200px;
+    top: 450px; 
+    left: 200px; 
     transform: rotate(45deg);
   }
   .image5 {
-    width: 200px; /* 圖片2的寬度 */
-    top: 300px; /* 圖片2距離容器頂部的距離 */
-    left: 50px; /* 圖片2距離容器左邊的距離 */
+    width: 200px; 
+    top: 300px; 
+    left: 50px; 
   }
   .image6 {
-    width: 500px; /* 圖片2的寬度 */
-    top: 100px; /* 圖片2距離容器頂部的距離 */
-    right:-35px; /* 圖片2距離容器左邊的距離 */
+    width: 500px; 
+    top: 100px; 
+    right:-35px; 
   }
   .image7 {
-    width: 250px; /* 圖片2的寬度 */
-    top: 100px; /* 圖片2距離容器頂部的距離 */
+    width: 250px; 
+    top: 100px; 
     left: 1000px; 
-    opacity: 0.5;/* 圖片2距離容器左邊的距離 */
+    opacity: 0.5;
   }
   .image8 {
-    width: 200px; /* 圖片2的寬度 */
-    top: 400px; /* 圖片2距離容器頂部的距離 */
-    left: 430px; /* 圖片2距離容器左邊的距離 */
+    width: 200px;
+    top: 400px; 
+    left: 430px; 
   }
   .image9 {
-    width: 100px; /* 圖片2的寬度 */
-    top: 200px; /* 圖片2距離容器頂部的距離 */
+    width: 100px; 
+    top: 200px;
     left: 600px;
-    opacity: 0.5; /* 圖片2距離容器左邊的距離 */
+    opacity: 0.5;
   }
   .image10 {
-    width: 250px; /* 圖片2的寬度 */
-    top: 400px; /* 圖片2距離容器頂部的距離 */
-    left: 850px; /* 圖片2距離容器左邊的距離 */
+    width: 250px;
+    top: 400px; 
+    left: 850px; 
   }
   .image11 {
-    width: 200px; /* 圖片2的寬度 */
-    top: 400px; /* 圖片2距離容器頂部的距離 */
+    width: 200px; 
+    top: 400px; 
     left: 1100px; 
-    opacity: 0.5;/* 圖片2距離容器左邊的距離 */
+    opacity: 0.5;
   }
   .image12 {
-    width: 200px; /* 圖片2的寬度 */
-    top: -60px; /* 圖片2距離容器頂部的距離 */
+    width: 200px;
+    top: -60px; 
     left: 1100px; 
  
   }
   .image13 {
-    width: 200px; /* 圖片2的寬度 */
-    top: 500px; /* 圖片2距離容器頂部的距離 */
+    width: 200px; 
+    top: 500px;
     left: -80px; 
-    opacity: 0.7;/* 圖片2距離容器左邊的距離 */
+    opacity: 0.7;
   }
   .image14 {
-    width: 200px; /* 圖片2的寬度 */
-    top: 250px; /* 圖片2距離容器頂部的距離 */
+    width: 200px; 
+    top: 250px;
     left: 280px; 
-    opacity: 0.7;/* 圖片2距離容器左邊的距離 */
+    opacity: 0.7;
   }
   .image15 {
-    width: 300px; /* 圖片2的寬度 */
-    top: -60px; /* 圖片2距離容器頂部的距離 */
-    left: 300px; /* 圖片2距離容器左邊的距離 */
+    width: 300px;
+    top: -60px; 
+    left: 300px; 
   }
   .image16 {
-    width: 200px; /* 圖片2的寬度 */
-    top: 40px; /* 圖片2距離容器頂部的距離 */
+    width: 200px; 
+    top: 40px; 
     left: 800px;
-    opacity: 0.7; /* 圖片2距離容器左邊的距離 */
+    opacity: 0.7;
   }
   .image00{
     width: 80px;
@@ -119,9 +119,8 @@ body {
     top: 30%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* 選擇性樣式 */
-    color: black; /* 文字顏色 */
-    font-size: 70px; /* 文字大小 */
+    color: black;
+    font-size: 70px; 
     font-family: 'Playfair Display', serif;
     white-space: nowrap;
   }
@@ -130,9 +129,8 @@ body {
     top: 38%;
     left: 50%;
     transform: translate(-50%, -50%);
-    /* 選擇性樣式 */
-    color: black; /* 文字顏色 */
-    font-size: 25px; /* 文字大小 */
+    color: black; 
+    font-size: 25px; 
     font-family: 'Playfair Display', serif;
   }
   .my-button {
@@ -154,10 +152,9 @@ body {
     width: 200px;
     height: 65px;
     overflow: hidden;
-    transition: transform 0.5s, box-shadow 0.5s; /* 添加過渡效果 */
+    transition: transform 0.5s, box-shadow 0.5s; 
   }
   
-  /* 定義鼠標懸停時的動畫 */
   @keyframes hoverEffect {
     0% {
       background-color: #fff;
@@ -175,7 +172,7 @@ body {
   }
   
   .my-button:hover {
-    animation: hoverEffect 1s infinite alternate; /* 應用動畫 */
+    animation: hoverEffect 1s infinite alternate; 
   }
   .card-img-top1 {
     width: 100%;
@@ -203,9 +200,9 @@ body {
   background-color: #fff;
   transition: transform 0.5s ease, scale 0.5s ease;
   position: absolute;
-  width: 440px; /* 卡片寬度 */
+  width: 440px;
   transform: translateX(0%) scale(1);
-  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* 添加陰影 */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); 
 }
 
 .card2 { 
@@ -213,7 +210,7 @@ body {
     background-color:#fff;
     text-align: center;
     border-radius: 10px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* 添加陰影 */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); 
     transition: transform 0.5s ease, scale 0.5s ease; 
     position: absolute;
     width: 440px; 
@@ -225,7 +222,7 @@ body {
     background-color:#fff;
     text-align: center;
     border-radius: 10px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* 添加陰影 */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     transition: transform 0.5s ease, scale 0.5s ease; 
     position: absolute;
     width: 440px; 
@@ -236,7 +233,7 @@ body {
     background-color:#fff;
     text-align: center;
     border-radius: 10px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* 添加陰影 */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     transition: transform 0.5s ease, scale 0.5s ease; 
     position: absolute;
     width: 440px; 
@@ -247,7 +244,7 @@ body {
     background-color:#fff;
     text-align: center;
     border-radius: 10px;
-    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2); /* 添加陰影 */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
     transition: transform 0.5s ease, scale 0.5s ease; 
     position: absolute;
     width: 440px; 
@@ -300,9 +297,9 @@ body {
 
 .p01 {
   position: absolute;
-  top: 5%; /* 调整这些值来移动文本 */
+  top: 5%;
   left: 50%;
-  transform: translate(-50%, -50%); /* 使其相对于自己的大小居中 */
+  transform: translate(-50%, -50%); 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -311,9 +308,9 @@ body {
 .pic01 img{
   width: 400px;
   position: absolute;
-  top: 0%; /* 调整这些值来移动文本 */
+  top: 0%; 
   left: 50%;
-  transform: translate(-50%, -50%); /* 使其相对于自己的大小居中 */
+  transform: translate(-50%, -50%); 
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -326,7 +323,7 @@ body {
   width: 100%;
   height: 300px;
   top: 700px;
-  z-index: 99;/* 确保.div1在其他图层之上 */
+  z-index: 99;
 }
 
 .parallax-container, .parallax-container1 {
@@ -337,14 +334,14 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; 
-  z-index: 1;/* 可以给这些元素一个较低的z-index值，确保.div1位于它们之上 */
+  z-index: 1;
 }
 
 
 .parallax-container1 {
-  top: 400px; /* Adjusted to follow .parallax-container */
+  top: 400px; 
   left: 50%;
-  transform: translateX(-50%); /* Center horizontally */
+  transform: translateX(-50%); 
   height: 595px;
   width: 382px;
   z-index: 10;
@@ -359,16 +356,15 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover; 
-  z-index: 5;/* 可以给这些元素一个较低的z-index值，确保.div1位于它们之上 */
-}
+  z-index: 5;
 
 .div0 {
-  transition: transform 0.5s ease-out; /* 可选：添加平滑过渡效果 */
+  transition: transform 0.5s ease-out; 
 }
 
 [data-scroll-container] {
   width: 100%;
-  height: auto; /* 或者不设置以使用默认的自动高度 */
+  height: auto; 
 }
 
 .btn {
@@ -436,9 +432,9 @@ body {
   cursor: pointer;
   overflow: hidden;
   transition: background-size 0.2s ease-in-out, background-color 0.5s;
-  background-size: 110%; /* 初始放大 */
-  background-position: center; /* 設定背景圖片位置為中心 */
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* 添加陰影 */
+  background-size: 110%; 
+  background-position: center; 
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 .el__inner { display: flex; justify-content: center; align-items: center; }
@@ -456,7 +452,7 @@ body {
     text-align: center; 
     background-color: rgba(0, 0, 0, 0);
     line-height: 1.5;
-    z-index: 2; /* 確保文字在遮蓋層之上 */
+    z-index: 2; 
 }
 .el__heading, .el__description { 
     position: absolute; 
@@ -465,16 +461,16 @@ body {
     transform: translateX(-50%); 
     text-align: center; 
     visibility: visible; 
-    z-index: 3; /* 確保標題在遮蓋層之上 */
+    z-index: 3; 
 }
 .el__image {
     position: absolute; 
     top: 10%;
-    width: 100px; /* 調整為所需寬度 */
-    height: 100px; /* 調整為所需高度 */
+    width: 100px;
+    height: 100px; 
     background-image: url('六格/活動小圖1.png');
     background-size: cover;
-    display: block; /* 確保 div 作為塊級元素顯示 */
+    display: block; 
 }
 .el:hover .el__image {
     background-image: url('六格/活動小圖h1.png');
@@ -482,11 +478,11 @@ body {
 .el__image2 {
     position: absolute; 
     top: 10%;
-    width: 100px; /* 調整為所需寬度 */
-    height: 100px; /* 調整為所需高度 */
+    width: 100px; 
+    height: 100px; 
     background-image: url('六格/討論串.png');
     background-size: cover;
-    display: block; /* 確保 div 作為塊級元素顯示 */
+    display: block; 
 }
 .el:hover .el__image2 {
     background-image: url('六格/討論串h1.png');
@@ -495,11 +491,11 @@ body {
 .el__image3 {
     position: absolute; 
     top: 10%;
-    width: 100px; /* 調整為所需寬度 */
-    height: 100px; /* 調整為所需高度 */
+    width: 100px;
+    height: 100px; 
     background-image: url('六格/捐款.png');
     background-size: cover;
-    display: block; /* 確保 div 作為塊級元素顯示 */
+    display: block; 
 }
 .el:hover .el__image3 {
     background-image: url('六格/捐款h1.png');
@@ -508,11 +504,11 @@ body {
 .el__image4 {
     position: absolute; 
     top: 10%;
-    width: 100px; /* 調整為所需寬度 */
-    height: 100px; /* 調整為所需高度 */
+    width: 100px; 
+    height: 100px; 
     background-image: url('六格/過期化妝品.png');
     background-size: cover;
-    display: block; /* 確保 div 作為塊級元素顯示 */
+    display: block; 
 }
 .el:hover .el__image4 {
     background-image: url('六格/過期化妝品h1.png');
@@ -520,11 +516,11 @@ body {
 .el__image5 {
     position: absolute; 
     top: 10%;
-    width: 100px; /* 調整為所需寬度 */
-    height: 100px; /* 調整為所需高度 */
+    width: 100px;
+    height: 100px; 
     background-image: url('六格/志工.png');
     background-size: cover;
-    display: block; /* 確保 div 作為塊級元素顯示 */
+    display: block; 
 }
 .el:hover .el__image5 {
     background-image: url('六格/志工h1.png');
@@ -532,11 +528,11 @@ body {
 .el__image6 {
     position: absolute; 
     top: 10%;
-    width: 100px; /* 調整為所需寬度 */
-    height: 100px; /* 調整為所需高度 */
+    width: 100px; 
+    height: 100px;
     background-image: url('六格/意見.png');
     background-size: cover;
-    display: block; /* 確保 div 作為塊級元素顯示 */
+    display: block; 
 }
 .el:hover .el__image6 {
     background-image: url('六格/意見h1.png');
@@ -565,22 +561,22 @@ body {
 }
 
 .el:hover {
-    background-size: 100%; /* 縮放到原始大小 */
-    background-color: rgba(0, 0, 0, 0.5); /* 滑鼠懸停時變暗背景 */
+    background-size: 100%; 
+    background-color: rgba(0, 0, 0, 0.5); 
 
 
     
 }
 .el:hover::after {
-    content: ""; /* 必須設定，即使沒有內容 */
+    content: ""; 
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: rgba(75, 82, 126, 0.6); /* 設定為藍色並且50%的透明度 */
-    pointer-events: none; /* 避免遮蓋層攔截滑鼠事件 */
-    z-index: 1; /* 確保遮蓋層在背景和文字之間 */
+    background-color: rgba(75, 82, 126, 0.6); 
+    pointer-events: none;
+    z-index: 1; 
 }
 .el h1{
   font-size: 30px;
@@ -596,32 +592,32 @@ body {
 }
 
 .h11 {
-  color: #7D7C7C !important; /* Ensures the text is black */
-  background-color: #fff !important; /* Adds a contrasting background */
-  padding: 10px; /* Adds some padding around the text */
-  position: relative; /* Needed for z-index to take effect */
+  color: #7D7C7C !important; 
+  background-color: #fff !important; 
+  padding: 10px; 
+  position: relative; 
   margin-top: -50px;
 }
 
 
- /* CSS for body, container, text, and image remains the same */
+ 
  .dots {
   position: absolute;
-  top: 50%; /* Adjust this value as needed */
-  right: -30px; /* Position dots to the right */
-  transform: translateY(-130%); /* Center vertically */
+  top: 50%; 
+  right: -30px; 
+  transform: translateY(-130%);
   display: flex;
-  flex-direction: column; /* Align dots vertically */
+  flex-direction: column; 
   align-items: center;
 }
 .dot {
   height: 10px;
   width: 10px;
-  margin: 5px 0; /* Vertical spacing */
+  margin: 5px 0;
   background-color: #bbb;
   border-radius: 50%;
-  display: block; /* Ensure dots are block level for vertical stacking */
-  cursor: pointer; /* Indicates that dots are clickable */
+  display: block; 
+  cursor: pointer; 
 }
 .dot.active {
   background-color: #717171;
@@ -632,8 +628,8 @@ body {
   width: 80%;
   height: 50%;
   margin-top: 250px;
-  margin-left: auto; /* 左邊距自動計算 */
-  margin-right: auto; /* 右邊距自動計算 */
+  margin-left: auto; 
+  margin-right: auto;
   margin-bottom: 250px;
 }
 
@@ -652,9 +648,9 @@ body {
   
 }
 .img0001 {
-  width: 100%;       /* 讓圖片寬度始終填滿容器 */
-  height: 100%;      /* 讓圖片高度始終填滿容器 */
-  background-position: center; /* 設定背景圖片位置為中心 */
+  width: 100%;       
+  height: 100%;     
+  background-position: center; 
   position: absolute;
   top: 0;
   left: 0;
@@ -666,39 +662,39 @@ body {
   left: 50%;
   width: 300px;
   height: 300px;
-  background-position: center; /* 確保背景圖片位置為中心 */
+  background-position: center; 
   z-index: 10;
-  position: absolute; /* 確保可以使用 transform 屬性 */
+  position: absolute; 
 }
 
 .image, .image.secondary {
-  opacity: 0; /* Set initial opacity to 0 for fade-in effect */
-  transition: opacity 1.5s ease-in-out; /* Smooth transition for the fade effect */
+  opacity: 0; 
+  transition: opacity 1.5s ease-in-out; 
 }
 
 
 @media only screen and (max-width: 768px) {
 .text {
-  width: 100%; /* 文本區域寬度增加 */
+  width: 100%;
 }
 .image-container {
   width: 100%;
-  position: relative; /* 調整定位 */
+  position: relative; 
   top: 0;
-  order: 1; /* 若使用flex布局，可調整顯示順序 */
+  order: 1; 
 }
 .container {
-  flex-direction: column; /* 容器元素堆疊 */
+  flex-direction: column; 
 }
 .dots {
-  position: static; /* 調整點點導航位置 */
+  position: static; 
   margin-top: 20px;
 }
 }
 
 @media only screen and (max-width: 480px) {
 .text {
-  padding: 10px; /* 更小的內邊距 */
+  padding: 10px;
 }
 }
   

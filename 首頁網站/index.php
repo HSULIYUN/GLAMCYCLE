@@ -150,7 +150,7 @@ include 'db.php'; ?>
 
 
 <div>
-   <h1><span class="h11"style="text-align: left; margin-left: 50px; font-size: 60px; color: black; font-weight: 900; /* 最粗的字體權重 */">最新資訊</span><span style="font-size:100px;font-family: 'Playfair Display', serif;font-weight: none;color: #7D7C7C !important;">NEWS</span></h1>
+   <h1><span class="h11"style="text-align: left; margin-left: 50px; font-size: 60px; color: black; font-weight: 900;">最新資訊</span><span style="font-size:100px;font-family: 'Playfair Display', serif;font-weight: none;color: #7D7C7C !important;">NEWS</span></h1>
 </div>
 
 
@@ -163,11 +163,11 @@ include 'db.php'; ?>
   <a href="javascript:void(0);" class="arrow left-arrow" onclick="showPrevCard()">&#10094;</a>
   
   <?php
-  $sql = "SELECT title, image_url, description, button_text, button_url FROM News WHERE id = 1";  // 假設我們只取id為1的記錄
+  $sql = "SELECT title, image_url, description, button_text, button_url FROM News WHERE id = 1";  
   $result = $conn->query($sql);
 
   if ($result->num_rows > 0) {
-      // 輸出數據
+
       while($row = $result->fetch_assoc()) {
           echo '<div class="card1">';
           echo '<img src="' . $row["image_url"] . '" class="card-img-top1" alt="...">';
@@ -189,11 +189,11 @@ include 'db.php'; ?>
   <a href="javascript:void(0);" class="arrow left-arrow" onclick="showPrevCard()">&#10094;</a>
   
   <?php
-  $sql = "SELECT title, image_url, description, button_text, button_url FROM News WHERE id = 2";  // 假設我們只取id為1的記錄
+  $sql = "SELECT title, image_url, description, button_text, button_url FROM News WHERE id = 2";  
   $result = $conn->query($sql);
 
   if ($result->num_rows > 0) {
-      // 輸出數據
+
       while($row = $result->fetch_assoc()) {
           echo '<div class="card2">';
           echo '<img src="' . $row["image_url"] . '" class="card-img-top1" alt="...">';
@@ -214,11 +214,11 @@ include 'db.php'; ?>
   <a href="javascript:void(0);" class="arrow left-arrow" onclick="showPrevCard()">&#10094;</a>
   
   <?php
-  $sql = "SELECT title, image_url, description, button_text, button_url FROM News WHERE id = 3";  // 假設我們只取id為1的記錄
+  $sql = "SELECT title, image_url, description, button_text, button_url FROM News WHERE id = 3";  
   $result = $conn->query($sql);
 
   if ($result->num_rows > 0) {
-      // 輸出數據
+      
       while($row = $result->fetch_assoc()) {
           echo '<div class="card3">';
           echo '<img src="' . $row["image_url"] . '" class="card-img-top1" alt="...">';
@@ -240,11 +240,11 @@ include 'db.php'; ?>
   <a href="javascript:void(0);" class="arrow left-arrow" onclick="showPrevCard()">&#10094;</a>
   
   <?php
-  $sql = "SELECT title, image_url, description, button_text, button_url FROM News WHERE id = 4";  // 假設我們只取id為1的記錄
+  $sql = "SELECT title, image_url, description, button_text, button_url FROM News WHERE id = 4";  
   $result = $conn->query($sql);
 
   if ($result->num_rows > 0) {
-      // 輸出數據
+      
       while($row = $result->fetch_assoc()) {
           echo '<div class="card4">';
           echo '<img src="' . $row["image_url"] . '" class="card-img-top1" alt="...">';
@@ -265,11 +265,11 @@ include 'db.php'; ?>
   <a href="javascript:void(0);" class="arrow left-arrow" onclick="showPrevCard()">&#10094;</a>
   
   <?php
-  $sql = "SELECT title, image_url, description, button_text, button_url FROM News WHERE id = 5";  // 假設我們只取id為1的記錄
+  $sql = "SELECT title, image_url, description, button_text, button_url FROM News WHERE id = 5";  
   $result = $conn->query($sql);
 
   if ($result->num_rows > 0) {
-      // 輸出數據
+      
       while($row = $result->fetch_assoc()) {
           echo '<div class="card5">';
           echo '<img src="' . $row["image_url"] . '" class="card-img-top1" alt="...">';
@@ -477,64 +477,63 @@ include 'db.php'; ?>
   window.addEventListener('scroll', function() {
   var scrollDistance = window.scrollY;
   var imageContainer = document.querySelector('.image-container');
-  var gradientDiv = document.querySelector('.gradient-div'); // 獲取gradient-div元素
+  var gradientDiv = document.querySelector('.gradient-div'); 
 
-  // 初始化缩放比例、透明度和gradient-div的位移
+  
   var scaleValue = 1;
   var opacityValue = 1;
-  var translateYValue = 0; // 初始化gradient-div的Y軸位移為0
+  var translateYValue = 0; 
 
   if (scrollDistance > 10) {
-    // 从10px开始滚动时，缩放比例、透明度和Y軸位移开始变化
+ 
     scaleValue = Math.max(0.5, 1 - (scrollDistance - 10) / 2000);
     opacityValue = Math.max(0, 1 - (scrollDistance - 10) / 2000);
-    translateYValue = Math.max(-899, -(scrollDistance - 1) / 1); // 这里的5是一个示例值，您可以根据需要调整
+    translateYValue = Math.max(-899, -(scrollDistance - 1) / 1); 
   }
 
-  // 更新图片容器的缩放和透明度
+
   imageContainer.style.transform = `scale(${scaleValue})`;
   imageContainer.style.opacity = opacityValue;
 
-  // 更新gradient-div的位移
+
   gradientDiv.style.transform = `translateY(${translateYValue}px)`;
 });
 
 let slideIndex = 0;
 const primaryImages = ['品牌/第一章.jpg', '品牌/第二章.jpg', '品牌/第三章.jpg', '品牌/第四章.jpg'];
-const slideShowInterval = 3000; // Interval for slide change
+const slideShowInterval = 3000; 
 
 function showSlides() {
   let primaryImg = document.getElementById('primaryImage');
   fadeOutImage(primaryImg, () => {
-    // After fade out, change image and fade in
     primaryImg.style.backgroundImage = `url('${primaryImages[slideIndex]}')`;
     fadeInImage(primaryImg);
   });
 
   updateDots();
-  slideIndex = (slideIndex + 1) % primaryImages.length; // Move to the next image set
-  setTimeout(showSlides, slideShowInterval); // Schedule the next change
+  slideIndex = (slideIndex + 1) % primaryImages.length; 
+  setTimeout(showSlides, slideShowInterval); 
 }
 
 function fadeOutImage(imageElement, callback) {
-  let opacity = 1; // start with full opacity
+  let opacity = 1; 
   let interval = setInterval(() => {
-    opacity -= 0.1; // decrease opacity faster
+    opacity -= 0.1; 
     imageElement.style.opacity = opacity;
     if (opacity <= 0) {
       clearInterval(interval);
-      callback(); // call the callback to change image and start fading in
+      callback(); 
     }
-  }, 25); // reduced interval to speed up fade out
+  }, 25);
 }
 
 function fadeInImage(imageElement) {
-  let opacity = 0; // start with 0 opacity
+  let opacity = 0; 
   let interval = setInterval(() => {
-    opacity += 0.1; // increase opacity faster
+    opacity += 0.1; 
     imageElement.style.opacity = opacity;
-    if (opacity >= 1) clearInterval(interval); // stop interval when opacity is full
-  }, 25); // reduced interval to speed up fade in
+    if (opacity >= 1) clearInterval(interval); 
+  }, 25); 
 }
 
 function updateDots() {
@@ -546,12 +545,11 @@ function updateDots() {
 }
 
 function currentSlide(n) {
-  slideIndex = n - 1; // adjust index for next call
+  slideIndex = n - 1; 
   showSlides();
 }
 
-showSlides(); // Initialize the slideshow
-
+showSlides(); 
 
 
 

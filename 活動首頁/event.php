@@ -1,12 +1,11 @@
 <?php
-// 数据库连接设置
 $host = 'localhost';
 $port = 3308;
 $dbname = 'cycle';
 $username = 'root';
 $password = '';
 
-// 建立PDO连接
+
 try {
     $conn = new PDO("mysql:host=$host;port=$port;dbname=$dbname", $username, $password);
     $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
@@ -17,12 +16,12 @@ try {
 
 include '../會員系統/auth0.php'; 
 
-// 獲取精選圖片路徑
+
 $query = "SELECT FeaturedImagePath FROM events WHERE EventID = 1";
 $result = $conn->query($query);
 $row = $result->fetch(PDO::FETCH_ASSOC);
 
-// 檢查是否成功取得圖片路徑，如果沒有取得，可以設置一個預設值
+
 $event_img_path = $row ? $row["FeaturedImagePath"] : 'default_image_path.jpg';
 ?>
 <!DOCTYPE html>
@@ -39,7 +38,7 @@ $event_img_path = $row ? $row["FeaturedImagePath"] : 'default_image_path.jpg';
 </head>
 <style>
     .event-description {
-    margin-top: 10px; /* 调整这个值来增加或减少与上方内容的距离 */
+    margin-top: 10px; 
 }
 </style>
 <body>

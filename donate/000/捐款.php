@@ -2,9 +2,9 @@
 <?php
 $host = 'localhost';
 $username = 'root';
-$password = ''; // 將這裡的值更換為實際的密碼
+$password = ''; 
 $database = 'cycle';
-$port = 3308; // 添加了新的端口號變量
+$port = 3308; 
 
 $conn = new mysqli($host, $username, $password, $database, $port);
 
@@ -12,7 +12,7 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-// 查詢總捐款金額
+
 $totalQuery = "SELECT SUM(mon) AS total FROM donations";
 $result = $conn->query($totalQuery);
 $totalDonations = $result->fetch_assoc()['total'];
@@ -25,7 +25,7 @@ $conn->close();
 ?>
 <!doctype html>
 <html lang="zh-tw">
-<!-- 資料庫連接 -->
+
 <form name="info" method="post" action="submit_donation.php">
 <head>
     <link rel="icon" type="icon" href="icon/gc.png" />
@@ -43,7 +43,7 @@ $conn->close();
 
     <title>捐款 | GLAMCYCLE</title>
     <style>
-        /* 導覽欄樣式 */
+
         .navbar {
             position: -webkit-sticky; 
     position: sticky;
@@ -78,19 +78,19 @@ $conn->close();
         }
 
         .carousel-item-next.carousel-item-left, .carousel-item-prev.carousel-item-right {
-            transform: scale(0.95); /* 縮小效果（可選） */
-            opacity: 0.5; /* 淡化到的目標不透明度 */
+            transform: scale(0.95); 
+            opacity: 0.5; 
         }
-        /* 輪播圖容器樣式 */
+
         .carousel {
-            margin-top: 0px; /* 顶部间距 */
+            margin-top: 0px;
         }
         
-         /* 輪播圖圖像樣式 */
+   
          .carousel-item img {
-            width: 50%; /* 圖片寬度減半 */
-            height: 50%; /* 圖片高度減半 */
-            object-fit: cover; /* 圖片填充方式 */
+            width: 50%;
+            height: 50%; 
+            object-fit: cover;
 
         }
         .carousel-item {
@@ -100,7 +100,7 @@ $conn->close();
             transition: transform 0.05s ease, opacity 0.05s ease;
         }
 
-        /* 表單樣式 */
+        
 
         .container {
             display: flex;
@@ -116,7 +116,7 @@ $conn->close();
             margin-top: 20px;
         }
         
-        /* 初始动画效果 */
+  
 @keyframes fadeInScale {
   0% {
     transform: scale(0.5);
@@ -143,16 +143,16 @@ $conn->close();
           transform: translateX(-50%);
         }
 .statistics {
-    display: flex; /* 添加这行 */
-    flex-wrap: wrap; /* 如果你希望在容器不够宽时，项目能够换行显示 */
+    display: flex; 
+    flex-wrap: wrap; 
     margin-top: 20px;
 }
 
 .volunteers {
     display: flex;
-    justify-content: center; /* 水平居中 */
+    justify-content: center; 
     align-items: center;
-    width: 100%; /* 让它占满整个容器宽度 */
+    width: 100%; 
 }
 
 .text-content {
@@ -178,11 +178,11 @@ $conn->close();
 .statistics .volunteers:nth-child(1) {
     margin-left: 300px;
 }
-/* 新增的 CSS 類別 */
+
 .donation-intro {
-    text-align: center; /* 使文字置中 */
-    padding: 20px; /* 添加一些內邊距 */
-    margin: 20px 0; /* 上下各添加一些外邊距，左右為自動(auto) */
+    text-align: center; 
+    padding: 20px; 
+    margin: 20px 0; 
 
 }
 
@@ -199,7 +199,7 @@ $conn->close();
     margin-top: 150px;
     margin-bottom: 150px;
     border-radius: 50px;
-    flex-direction: column; /* 将内容排列方式改为垂直方向 */
+    flex-direction: column; 
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5); 
 }
 
@@ -207,13 +207,13 @@ $conn->close();
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    width: 100%; /* 让表单占满.info容器的宽度 */
+    width: 100%; 
 }
 
 .left-side, .right-side {
     display: flex;
     flex-direction: column;
-    transform: translateY(-100px); /* 往上移动 */
+    transform: translateY(-100px); 
 }
 
 
@@ -222,7 +222,7 @@ $conn->close();
     width: 250px;
     height: 44px;
     line-height: 44px;
-    margin-bottom: 60px; /* 间距调整 */
+    margin-bottom: 60px; 
 
 }
 
@@ -276,28 +276,28 @@ textarea:valid ~ label {
     color: black;
 }
 .input-field input::placeholder {
-    color: #4B527E; /* 设置占位符文本的颜色 */
-    opacity: 1; /* 确保占位符文本始终可见 */
+    color: #4B527E; 
+    opacity: 1; 
 }
 
 .input-field input:focus::placeholder,
 .input-field input:valid::placeholder {
-    color: transparent; /* 聚焦时或输入有效时隐藏占位符文本 */
+    color: transparent; 
 }
 
 .input-field input:focus ~ label[for="eeee"]::after,
 .input-field input:valid ~ label[for="eeee"]::after {
-    content: "MM/YY"; /* 在输入框下方添加内容 */
-    color: #4B527E; /* 设置颜色 */
-    margin-left: 5px; /* 调整与输入框之间的距离 */
+    content: "MM/YY"; 
+    color: #4B527E; 
+    margin-left: 5px; 
 }
 
-/* 定义默认样式 */
+
 #submitBtn {
-    align-self: center; /* 居中 */
+    align-self: center; 
     margin-top: 120px;
     margin-bottom: 50px;
-    height: 90px; /* 调整距离上方的间距 */
+    height: 90px;
     width: 400px;
     border:#4B527E 2px solid ;
     background-color: #86B6F6;
@@ -308,7 +308,7 @@ textarea:valid ~ label {
     transition: background-color 0.3s, transform 0.3s;
 }
 
-/* 定义悬停时的样式 */
+
 #submitBtn.hover-effect {
     background-color: #7C93C3;
     transform: scale(1.1);
@@ -320,7 +320,7 @@ textarea:valid ~ label {
 }
 
 .info .line {
-    flex-grow: 1; /* 让直线占据剩余的空间 */ /* 可选：调整直线与标题之间的间距 */
+    flex-grow: 1; 
     border: none;
     border: #86B6F6 3px solid;
     border-bottom:none ;
@@ -331,10 +331,10 @@ textarea:valid ~ label {
     margin-top: 10px;
 }
 body {
-    background-image: url('圖片/背1-1.png'); /* 替换 'image.jpg' 为您实际图片的路径 */
-    background-size: cover; /* 背景图片大小自适应 */
-    background-position: center; /* 背景图片居中显示 */
-    background-repeat: no-repeat; /* 防止背景图片重复 */
+    background-image: url('圖片/背1-1.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
     
 }
 .button1 {
@@ -350,7 +350,7 @@ body {
   color: #4B527E;
   font-weight: bold;
   text-align: center;
-  line-height: 50px; /* 使文本垂直居中 */
+  line-height: 50px; 
   cursor: pointer;
 }
 
@@ -358,74 +358,72 @@ body {
   background-color: #4B527E;
   color: #fff;
 }
-@media (max-width: 1300px) { /* 斷點設為768px，常用於平板裝置 */
+@media (max-width: 1300px) { 
     .container {
-        flex-direction: column; /* 在較小螢幕上將容器改為垂直佈局 */
+        flex-direction: column; 
     }
     
     .info {
-        width: 90%; /* 調整寬度以適應較小螢幕 */
-        height: auto; /* 高度自適應 */
-        margin-top: 50px; /* 調整邊距以適應較小螢幕 */
+        width: 90%; 
+        height: auto; 
+        margin-top: 50px; 
         margin-bottom: 50px;
     }
     
     .left-side, .right-side {
-        flex-direction: column; /* 在較小螢幕上改為垂直佈局 */
-        margin-top: 120px; /* 減少上邊距 */
-        margin-left: 0; /* 去除左邊距 */
-        margin-right: 0; /* 去除右邊距 */
+        flex-direction: column; 
+        margin-top: 120px; 
+        margin-left: 0; 
+        margin-right: 0; 
     }
     
     .input-field input, .input-field textarea {
-        width: 90%; /* 調整輸入框寬度以適應較小螢幕 */
+        width: 90%; 
     }
     
     #submitBtn {
-        width: 90%; /* 調整按鈕寬度以適應較小螢幕 */
+        width: 90%; 
     }
 }
 
-@media (max-width: 480px) { /* 斷點設為480px，常用於手機裝置 */
+@media (max-width: 480px) { 
     .navbar-nav .nav-link, .user-name {
-        font-size: 18px; /* 在手機上減小字體大小 */
+        font-size: 18px; 
     }
     
     .carousel-item img {
-        width: 100%; /* 在手機上調整輪播圖寬度 */
-        height: auto; /* 高度自適應 */
+        width: 100%;
+        height: auto;
     }
 }
 
-/* 原始樣式 */
+
 .container {
     display: flex;
     width: 100%;
-    flex-direction: row; /* 保持水平佈局 */
-    flex-wrap: wrap; /* 允許子元素換行 */
+    flex-direction: row; 
+    flex-wrap: wrap; 
 }
 
-/* 響應式斷點 */
+
 @media (max-width: 768px) {
     .container {
-        flex-direction: column; /* 在較小螢幕上將容器改為垂直佈局 */
-        align-items: center; /* 中心對齊子元素 */
-        padding: 20px; /* 添加一些內邊距 */
+        flex-direction: column;
+        align-items: center;
+        padding: 20px; 
     }
 }
 
 @media (max-width: 480px) {
     .container {
-        width: 100%; /* 在更小的螢幕上使用全寬 */
+        width: 100%; 
     }
 }
 
-/* 响应式调整 */
 
-/* 响应式调整 */
 @media (max-width: 1300px) {
     .statistics .volunteers:nth-child(2) {
-        margin-left: 200px; /* 调整第二个子元素的左边距 */
+        margin-left: 200px;
         margin-top: 30px;
         flex-direction: row;
         justify-content: center;
@@ -433,14 +431,14 @@ body {
     }
 
     .statistics .volunteers:nth-child(1) {
-        margin-left: -300px; /* 调整第一个子元素的左边距 */
+        margin-left: -300px; 
         flex: 1 0 100%;
         justify-content: center;
         margin-right: 0;
     }
     .button1 {
         margin-top: -1000px; 
-        margin-left: 500px;/* 调整按钮的左边距 */
+        margin-left: 500px;
     }
 }
 
@@ -450,34 +448,12 @@ body {
         width: 50%;
     }
 }
-
-
-
-
-
-
-
-/* 移除.volunteers的margin-top样式，因为已经在.statistics上统一设置了 */
-
-
-
-/* 你可能需要根据实际情况调整这些样式 */
-
-
-
-
     </style>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     
    
 </head>
 <body>
-    
-
-
-<!-- 導航欄 -->
-<!-- 下拉式選單 -->
-<!-- 下拉式選單 -->
 <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
        
@@ -530,11 +506,6 @@ body {
     </div>
 </nav>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-<!-- 下拉式選單結束 -->
-
-
-<!-- 下拉式選單結束 -->
-<!-- 輪播圖 -->
 <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000" >
     <div class="carousel-inner">
         <div class="carousel-item active">
@@ -557,7 +528,7 @@ body {
     </button>
 </div>
 
-<!-- 捐款表單 -->
+
 <div class="container">
     <div class="welcome-section" >
         <h2 class="donation-intro" style="color:#4B527E;font-size: 50px;"><strong>立即捐款，讓您的愛心與我們一起發光發亮！</strong></h2>
@@ -588,10 +559,6 @@ body {
 
     </div>
     
-
-
-
-
 </div>
 
 <div class="info">
@@ -643,7 +610,7 @@ body {
 
 </div>
 
-<!-- 安全機器人 -->
+
 <script src="https://www.google.com/recaptcha/api.js?render=6Lew6pMpAAAAACtHg6401eggdpStQxrvAP8T1SPu"></script>
 <script>
     grecaptcha.ready(function() {
@@ -651,7 +618,7 @@ body {
             document.getElementById('recaptchaResponse').value = token;
         });
     });
-    // 当文档加载完毕后执行初始化操作
+
 
 
 </script>
@@ -659,12 +626,12 @@ body {
 </body>
 
 
-<!-- 使用者輸入檢查 -->
+
 <script>
     document.addEventListener("DOMContentLoaded", function() {
-        // 驗證姓名格式
+     
         document.getElementById("name").addEventListener("input", function() {
-            const namePattern = /^[\u4e00-\u9fa5\s·]+$/; // 只允許中文字符、空格及·
+            const namePattern = /^[\u4e00-\u9fa5\s·]+$/; 
             if (!namePattern.test(this.value)) {
                 this.setCustomValidity("姓名只能包含中文字符、空格及·");
             } else {
@@ -672,7 +639,7 @@ body {
             }
         });
     
-        // 驗證電子信箱格式
+
         document.getElementById("email").addEventListener("input", function() {
             const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailPattern.test(this.value)) {
@@ -682,7 +649,7 @@ body {
             }
         });
     
-        // 確保捐款金額是正值
+
         document.getElementById("mon").addEventListener("input", function() {
             if (parseInt(this.value, 10) <= 0) {
                 this.setCustomValidity("捐款金額必須大於0");
@@ -691,7 +658,7 @@ body {
             }
         });
     
-        // 驗證信用卡安全碼
+        
         document.getElementById("safe").addEventListener("input", function() {
             const securityCodePattern = /^\d{3}$/;
             const securityCodeError = document.getElementById("security-code-error");
@@ -704,25 +671,25 @@ body {
             }
         });
         
-        // 信用卡號碼驗證
+
     document.getElementById("eee").addEventListener("input", function() {
         const creditCardPattern = /^\d{16}$/;
-        if (!creditCardPattern.test(this.value.replace(/\s+/g, ''))) { // 移除空格後檢查
+        if (!creditCardPattern.test(this.value.replace(/\s+/g, ''))) { 
             this.setCustomValidity("信用卡號碼必須是16位數字");
         } else {
             this.setCustomValidity("");
         }
     });
 
-    // 信用卡到期日格式化（MMYY）
+
     document.getElementById("eeee").addEventListener("input", function() {
         var input = this.value;
         if (input.length === 2 && !input.includes('/')) {
-            this.value = input + "/"; // 在兩位數後自動添加斜線
+            this.value = input + "/";
         }
     });
 
-    // 身份證號碼格式驗證
+
     document.getElementById("pas").addEventListener("input", function() {
         const idPattern = /^[A-Z][0-9]{9}$/;
         if (!idPattern.test(this.value)) {
@@ -736,7 +703,7 @@ body {
     </script>
     
     
-<!-- 美化 -->
+
 <script>
   document.addEventListener('DOMContentLoaded', function () {
   var carouselElement = document.querySelector('#carouselExampleControls');
@@ -745,19 +712,19 @@ body {
   });
 
   carouselElement.addEventListener('slide.bs.carousel', function (e) {
-    // 重置即將離開的項目
+
     var activeItem = carouselElement.querySelector('.carousel-item.active');
     activeItem.style.opacity = 0.1;
     activeItem.style.transform = 'scale(0.95)';
     
-    // 設定即將顯示的項目
+
     var nextItem = e.relatedTarget;
     nextItem.style.opacity = 0.1;
     nextItem.style.transform = 'scale(0.95)';
   });
 
   carouselElement.addEventListener('slid.bs.carousel', function () {
-    // 確保所有項目都被重置
+
     var items = carouselElement.querySelectorAll('.carousel-item');
     items.forEach(function (item) {
       item.style.opacity = 1;
@@ -770,14 +737,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const welcomeSection = document.querySelector('.info');
     let animated = false;
 
-    // 初始化h2和p為不可見
+
     const h2 = document.querySelector('.welcome-section h2');
     const ps = document.querySelectorAll('.welcome-section p');
     h2.style.opacity = 0;
-    h2.style.transform = 'translateY(20px)'; // 初始轉換設置
+    h2.style.transform = 'translateY(20px)'; 
     ps.forEach(p => {
         p.style.opacity = 0;
-        p.style.transform = 'translateY(20px)'; // 初始轉換設置
+        p.style.transform = 'translateY(20px)'; 
     });
 
     const fadeIn = (element, delay = 0) => {
@@ -792,15 +759,13 @@ document.addEventListener('DOMContentLoaded', () => {
         if (animated) return;
         animated = true;
 
-        // 觸發h2淡入動畫，無需延遲
         fadeIn(h2);
 
-        // 觸發p的淡入動畫，每個p元素延遲增加
+  
         ps.forEach((p, index) => {
-            fadeIn(p, 100 * (index + 1)); // 延遲以確保順序淡入
+            fadeIn(p, 100 * (index + 1)); 
         });
 
-        // 觸發數字動畫
         animateNumbers();
     };
 
@@ -814,7 +779,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const animateNumber = (selector, start, end, duration) => {
                 const element = document.querySelector(selector);
                 let current = start;
-                const step = 200; // 每次增加的步數
+                const step = 200; 
 
                 const interval = setInterval(() => {
                     current += step;
@@ -849,30 +814,27 @@ document.getElementById('safe').addEventListener('input', function() {
         securityCodeError.textContent = "";
     }
 });
-// 获取按钮元素
+
 const submitBtn = document.getElementById('submitBtn');
 
-// 添加鼠标悬停事件监听器
+
 submitBtn.addEventListener('mouseenter', function() {
-    // 添加悬停效果的类
+
     this.classList.add('hover-effect');
 });
 
-// 添加鼠标离开事件监听器
 submitBtn.addEventListener('mouseleave', function() {
-    // 移除悬停效果的类
+
     this.classList.remove('hover-effect');
 });
 
 document.addEventListener('DOMContentLoaded', function () {
     const myButton = document.getElementById('myButton');
 
-    // 悬停进入
     myButton.addEventListener('mouseenter', function() {
         this.classList.add('hover-effect');
     });
 
-    // 悬停离开
     myButton.addEventListener('mouseleave', function() {
         this.classList.remove('hover-effect');
     });

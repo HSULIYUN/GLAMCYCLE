@@ -1,5 +1,4 @@
 <!DOCTYPE html>
- <!-- 登入/註冊頁面 -->
 <html lang="zh-tw">
 <head>
     <meta charset="UTF-8">

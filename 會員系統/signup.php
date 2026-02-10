@@ -1,6 +1,6 @@
 <?php
-/* 註冊驗證 */
-include 'config.php';  // 引入连接配置
+
+include 'config.php';  
 
 if (isset($_POST['username'], $_POST['email'], $_POST['phone'], $_POST['password'], $_POST['confirm_password'])) {
     echo "All fields are set.<br>";
@@ -8,7 +8,7 @@ if (isset($_POST['username'], $_POST['email'], $_POST['phone'], $_POST['password
         echo "Email is valid.<br>";
         if (preg_match('/^\d{10}$/', $_POST['phone'])) {
             echo "Phone is valid.<br>";
-            // 檢查密碼長度及包含英文字母
+            
             if (strlen($_POST['password']) >= 8 && preg_match('/[a-zA-Z]/', $_POST['password'])) {
                 echo "Password length is valid and contains letters.<br>";
                 if ($_POST['password'] === $_POST['confirm_password']) {
@@ -20,13 +20,13 @@ if (isset($_POST['username'], $_POST['email'], $_POST['phone'], $_POST['password
                     $password = $conn->real_escape_string($_POST['password']);
                     $hashed_password = password_hash($password, PASSWORD_DEFAULT);
 
-                    // 檢查用戶名是否已存在
+          
                     $checkUsername = "SELECT username FROM users WHERE username='$username'";
                     $usernameResult = $conn->query($checkUsername);
                     if ($usernameResult->num_rows > 0) {
                         echo "<script>alert('用戶名已被註冊，請換一個。'); window.history.back();</script>";
                     } else {
-                        // 檢查電子郵件是否已被註冊
+                        
                         $checkEmail = "SELECT email FROM users WHERE email='$email'";
                         $emailResult = $conn->query($checkEmail);
                         if ($emailResult->num_rows > 0) {

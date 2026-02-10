@@ -1,5 +1,4 @@
 <?php
-/* 確認使用者驗證碼是否輸入正確 */
 session_start();
 header('Content-Type: application/json');
 

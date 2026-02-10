@@ -1,5 +1,4 @@
 <?php
-/* 當使用者未登入時 */
 session_start();
 
 function getUserDisplayName() {

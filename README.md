@@ -61,11 +61,4 @@
     * 修改 Host, Username, Password。
 5.  開啟瀏覽器訪問 `localhost/your-repo-name`。
 
----
 
-## 📬 聯絡我 (Contact)
-如果你對這個專案感興趣，或有任何技術交流的機會，歡迎聯繫我！
-
-* **Name:** [你的名字 / 許莉筠]
-* **Email:** [你的 Email]
-* **GitHub:** [你的 GitHub 連結]
